@@ -1,0 +1,1139 @@
+{
+    "name": "fish",
+    "version": 2,
+    "sources": [
+        ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/cr_seafoodwatch/sfw_recommendations.aspx?c=ln"],
+        ["Marine Conservation Society", "http://www.fishonline.org/"],
+        ["Fish Watch", "http://www.nmfs.noaa.gov/fishwatch/"],
+        ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+        ["Eat the Seasons", "http://eattheseasons.co.uk/foodseasons.htm"],
+        ["Wikipedia", "http://en.wikipedia.org/"],
+        ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+    ],
+    "explanation": "<p>Information was compiled from four main sources: the Monterey Bay Aquarium, the Marine Conservation Society, FishWatch, and the Greenpeace Red List. Individual entries have lists of sources, and I have aimed to reach a verdict solely based on the information contained in the sources. MCS ratings of 1-2 are considered \"sustainable\", and a rating of 3 is acceptable if other sources label the fish as sustainable.</p><p>Where there was serious contradiction, or the differences between sustainable and unsustainable sources of a fish was too involved, I have erred on the side of caution.</p><p>With some fish labeled unsustainable there will be exceptions where you can source them sustainably from specific places. To highlight these sources and mention updates, I've started a twitter stream at <a href=\"http://twitter.com/#!/which_fish\">@which_fish</a>.</p>", 
+    "categories": [
+        {
+          "name": " All Bottom Trawled Fish",
+          "sustainable": "no",
+          "description": "Avoid eating all fish caught by bottom trawling, which does serious damage to the seafloor.",
+          "sources": [
+            ["Wikipedia", "http://en.wikipedia.org/wiki/Trawling#Environmental_damage"]
+          ]
+        },
+        {
+          "name": " All Fish caught by Longline",
+          "sustainable": "no",
+          "description": "Avoid eating all fish caught by longline fishing, as this may cause a lot of bycatch: unwanted fish and other sea life killed by the longline.",
+          "sources": [
+            ["Wikipedia", "http://en.wikipedia.org/wiki/Longline_fishing"]
+          ]
+        },
+        {
+          "name": "Trout",
+          "sustainable": "depends",
+          "categories": [
+            {
+              "name": "Rainbow Trout",
+              "sustainable": "yes",
+              "description": "A farmed freshwater fish with reddish flesh that is a popular alternative to salmon.",
+              "mercury": "low",
+              "sources": [
+                ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?fid=64"],
+                ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=trout%2C+rainbow&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-d8f2aa43e2ffac87f7672702193f300a&form_id=stfish_search_long_form"],
+                ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+              ],
+              "explanation": "Monterey Bay Aquarium states that farmed rainbow trout are a good choice. The MCS rate farmed rainbow trout as 1-3 on a scale of 5, with 1 for organic farmed trout. FishWatch and Greenpeace have no data."
+            },
+            {
+              "name": "Other",
+              "sustainable": "no",
+              "description": "Sea and lake trout are not fished sustainably.",
+              "mercury": "low",
+              "sources": [
+                ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?fid=236"],
+                ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=trout%2C+brown+or+sea&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-554e41894cd115556acae4c2ca7965f3&form_id=stfish_search_long_form"],
+                ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+              ],
+              "explanation": "Monterey Bay Aquarium and the MCS give a mixed to negative picture for sea trout. MCS rate it 3-5 depending on method of capture and farming. FishWatch and Greenpeace have no data."
+            }
+          ]
+        },
+        {
+          "name": "Salmon",
+          "sustainable": "depends",
+          "categories": [
+              {
+                  "name": "Farmed",
+                  "sustainable": "yes",
+                  "description": "Farmed salmon is comparatively sustainable. Prefer organic salmon, or salmon farmed in closed tank system that prevent environmental contamination."
+              },
+              {
+                  "name": "Alaskan",
+                  "sustainable": "yes",
+                  "inSeason": ["february", "march", "april", "may", "june", "july", "august"],
+                  "description": "Salmon stocks in Alaska are very carefully managed and monitored, which makes this a very sustainable option."
+              },
+              {
+                  "name": "Atlantic",
+                  "sustainable": "no",
+                  "description": "Salmon stocks in the Atlantic are overfished."
+              },
+              {
+                  "name": "Other",
+                  "sustainable": "yes",
+                  "description": "Salmon farmed or caught in other places is comparatively sustainable."
+              }
+          ],
+          "mercury": "low",
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=17"],
+            ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=salmon&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-48a659c6a8ef4e5559a388f28a39b45f&form_id=stfish_search_long_form"],
+            ["Fish Watch", "http://www.nmfs.noaa.gov/fishwatch/"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "explanation": "The Monterey Bay Aquarium lists wild-caught Alaskan salmon and farmed US salmon as good choices. The MCS rates Pacific salmon as 2 and farmed European salmon as 3, but Atlantic salmon as 5. FishWatch rates Atlantic salmon as overfished and other salmon populations as variable or threatened."
+        },
+        {
+          "name": "Oysters",
+          "sustainable": "yes",
+          "description": "Oyster farms have very little environmental impact. Avoid dredged wild oysters, as their harvesting can seriously damage the seafloor.",
+          "mercury": "low",
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=82"],
+            ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=oyster&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-62de34f1baa91ce8a9485cc098f3fa32&form_id=stfish_search_long_form"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "explanation": "The Monterey Bay Aquarium and MCS approve of farmed oysters. Wild oysters may be problematic due to environmental damage caused by dredging, but most oysters are farmed. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Arctic Char",
+            "sustainable": "yes",
+            "description": "A freshwater fish related to salmon and trout. Char are farmed in land-based systems that minimize environmental impact and require relatively little feed.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=75"]
+            ],
+            "explanation": "The Monterey Bay Aquarium approves of eating both farmed and wild-caught arctic char. The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Barramundi",
+            "sustainable": "depends",
+            "description": "A popular fish in Thai cuisine and in Australia. It is fished and farmed across the world. Also called Asian seabass.",
+            "categories": [
+              {
+                "name": "US/Europe/Australia",
+                "sustainable": "yes"
+              },
+              {
+                "name": "Closed Production",
+                "sustainable": "yes"
+              },
+              {
+                "name": "Other",
+                "sustainable": "no"
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=78"]
+            ],
+            "explanation": "The Monterey Bay Aquarium states that US and Australian barramundi is generally good to eat, as is other barramundi that is farmed in closed systems. The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Mussels",
+            "sustainable": "depends",
+            "categories": [
+              {
+                "name": "Farmed",
+                "sustainable": "yes",
+                "description": "Farmed mussels do not require feeding or chemical treatment and hence have a very low environmental impact."
+              },
+              {
+                "name": "Wild Caught",
+                "sustainable": "yes",
+                "inSeason": ["january", "february", "march", "october", "november", "december"],
+                "description": "Wild mussels are generally sustainable, but avoid ones harvested by dredging as this damages the seafloor."
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=81"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=mussel&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-4c73cee8a23599e3613c4af2f5df6b26&form_id=stfish_search_long_form"],
+              ["Eat the Seasons", "http://eattheseasons.co.uk/Archive/mussels.htm"]
+            ],
+            "explanation": "The MCS and Monterey Bay Aquarium agree that farmed mussels are very sustainable. According to the MCS, hand-caught mussels are rated 1, while mussels obtained by dredging are rated 3. Seasonality information for wild caught mussels is from Eat the Seasons. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Clam",
+            "sustainable": "depends",
+            "categories": [
+              {
+                "name": "Dredged",
+                "sustainable": "no",
+                "description": "However, dredging for clams damages the seafloor."
+              },
+              {
+                "name": "Other",
+                "sustainable": "yes"
+              }
+            ],
+            "mercury": "low",
+            "description": "Clams are generally sustainable, and stock levels are good.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=80"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=clam&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-b0069c5e60c2520fe2ecfa41f3e96728&form_id=stfish_search_long_form"],
+              ["FishWatch (Atlantic Surfclam)", "http://www.nmfs.noaa.gov/fishwatch/species/atlantic_surfclam.htm"],
+              ["FishWatch (Ocean Quahog)", "http://www.nmfs.noaa.gov/fishwatch/species/ocean_quahog.htm"],
+              ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "There are a large number of different clam species. The Monterey Bay Aquarium rates all types of clam as \"Best Choice\" or \"Good Alternative\", and FishWatch indicates that neither the ocean quahog nor the atlantic surfclam are overfished. The MCS rates manually collected clams as 2 and dredged quahogs as 3. However, the MCS rates American hard shell clams as 4, and ocean quahogs are on the Greenpeace red list for \"Destructive Fishing Methods\", \"Habitat Impacts\" and \"Poor Fishery Management\". In conclusion, the issue with clams appears to be not as much overfishing as the negative impact of dredging."
+        },
+        {
+            "name": "Razor Clam",
+            "sustainable": "no",
+            "description": "Razor clam stocks are depleted and badly managed. They are threatened by an illegal fishing method known as \"electric fishing\", where electrodes dragged along the sea bed are used to chase them out of their burrows.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?fid=29"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=razor+clam&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-0c4a3d349104749b70fa01f76f063897&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lumps in razor clams along with other clams as \"Best Choice\". However, the MCS paints a different picture, rating them 3-5 depending on the method of collection. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Striped Bass",
+            "sustainable": "yes",
+            "description": "A popular fish in the US and other countries both for sports fishing and aquaculture. Both wild-caught and farmed striped bass are sustainable: Wild stocks are at high levels, and bass are farmed in tanks, preventing environmental contamination.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=23"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/atl_striped_bass.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "Both the Monterey Bay Aquarium and FishWatch state that striped bass is not overfished. The former also states that farmed striped bass is generally raised inland avoiding ocean pollution."
+        },
+        {
+            "name": "Catfish",
+            "sustainable": "depends",
+            "description": "A very popular farmed fish in the US, their vegetarian diet makes them low-impact.",
+            "mercury": "low",
+            "categories": [
+              {
+                "name": "US Farmed",
+                "sustainable": "yes"
+              },
+              {
+                "name": "Other",
+                "sustainable": "no"
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=34"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists US farmed catfish (as opposed to basa/pangasius) as sustainable, but other catfish is implied not to be sustainable. The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Tilapia",
+            "sustainable": "depends",
+            "description": "A popular farmed white fish.",
+            "mercury": "low",
+            "categories": [
+                {
+                    "name": "Organic or Closed Production",
+                    "sustainable": "yes",
+                    "description": "Tilapia farmed in well-managed pond systems insulated from natural bodies of water is very sustainable. Look for organic Tilapia or fish produced in \"closed recirculation systems\"."
+                },
+                {
+                    "name": "Other",
+                    "sustainable": "no",
+                    "description": "A lot of Tilapia, especially in China, is farmed in very environmentally damaging ways, causing water pollution, disease and the destruction of habitats."
+                }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=27"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=tilapia&fish_method_of_production=2&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=1&op=Search&form_build_id=form-9253257ec0d500127a1b94b9dc152945&form_id=stfish_search_short_form"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists US tilapia as \"Best Choice\", South American as \"Good Alternative\" and Chinese/Taiwanese as \"Avoid\". The MCS rates tilapia farmed organically or in closed recirculation systems as 1, its best score. The conclusion is that it is actually the method of production rather than the origin country that determines tilapia's sustainability. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Dab",
+            "sustainable": "no",
+            "description": "A kind of flatfish similar to the plaice and flounder - but its stocks are in much better shape.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=106"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists dab as \"Avoid\". The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Flounder",
+            "sustainable": "yes",
+            "description": "A kind of flatfish similar to the plaice and dab. Stocks are not well-regulated and some are threatened. Carefully sourced flounder should be OK.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=39"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=flounder&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-25d8984e5c9310a57b75de857ccc8d14&form_id=stfish_search_long_form"],
+              ["FishWatch (Arrowtooth Flounder)", "http://www.nmfs.noaa.gov/fishwatch/species/arrowtooth_flounder.htm"],
+              ["FishWatch (Summer Flounder)", "http://www.nmfs.noaa.gov/fishwatch/species/summer_flounder.htm"],
+              ["FishWatch (Winter Flounder)", "http://www.nmfs.noaa.gov/fishwatch/species/winter_flounder.htm"],
+              ["FishWatch (Yellowtail Flounder)", "http://www.nmfs.noaa.gov/fishwatch/species/yellowtail_flounder.htm"],
+              ["FDA Mercury Table (\"Flatfish\")", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists flounder as \"Good Alternative\"/\"Avoid\", but then lists fish that are not flounders like dab. The MCS rates flounders as 2-3, but picks out witch flounder or torbay sole as 4. FishWatch say that arrowtooth and summer flounders are OK, but winter and yellowtail flounders are overfished. The conclusion is a very tentative \"not sustainable\", and further data would be very useful! Greenpeace have no information."
+        },
+        {
+            "name": "Bream",
+            "sustainable": "depends",
+            "categories": [
+                {
+                    "name": "Gilthead Bream",
+                    "sustainable": "no",
+                    "description": "Also called daurade or dorada, a popular Mediterranean fish that is unfortunately farmed in an environmentally damaging way."
+                },
+                {
+                    "name": "Red Seabream",
+                    "sustainable": "no",
+                    "description": "A vulnerable species with no regulated fishery."
+                },
+                {
+                    "name": "Black Bream/Seabream",
+                    "sustainable": "yes",
+                    "inSeason": ["january", "february", "march", "april", "august", "september", "october", "november", "december"],
+                    "description": "Stocks are not closely monitored but are believed to be reasonably healthy."
+                }
+            ],
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=bream&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-762fa47396fd90e2cbf3c49c20e9f40d&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The MCS rates black bream as 2-3, but gilthead and red seabream as 4 and 5 respectively. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Cockle",
+            "sustainable": "depends",
+            "description": "Small saltwater clams with a round, ribbed shell.",
+            "categories": [
+                {
+                    "name": "Dredged",
+                    "sustainable": "no",
+                    "description": "Avoid cockles harvested by dredging as this damages the seafloor."
+                },
+                {
+                    "name": "Hand Gathered",
+                    "sustainable": "yes",
+                    "inSeason": ["january", "february", "september", "october", "november", "december"],
+                    "description": "Hand-gathered cockles are generally screened for size and are very sustainable."
+                }
+            ],
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=cockle&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-fe1c6c9f1059bdca80aa82ab71a0a80a&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The MCS advises against consuming dredged cockles as dredging damages the sea floor. Hand-gathered cockles are rated 2. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Herring",
+            "sustainable": "depends",
+            "description": "A popular oily fish often seen pickled or fried.",
+            "mercury": "low",
+            "categories": [
+                {
+                    "name": "Norway, Iceland, North Sea, US",
+                    "sustainable": "yes",
+                    "description": "Fisheries in Norway, Iceland, in the US and in the North Sea are carefully managed and hence sustainable."
+                },
+                {
+                    "name": "Other",
+                    "sustainable": "no",
+                    "description": "Many herring fisheries, especially in the Baltic and around parts of Scotland and Ireland are in an extremely bad condition, with stocks near-eradicated."
+                }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=83"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=herring&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-95df4b2ce5c9d0899ce152eca44ead10&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/atl_herring.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "Sources paint a very complex picture here: The Monterey Bay Aquarium labels US Atlantic herring as a \"Good Alternative\", and FishWatch agrees, stating that US Atlantic herring is at 97% of target level and is being fished using low-impact methods. The MCS has a more detailed breakdown that indicates that some stocks, especially in the Baltic, Ireland and Scotland, are in extremely bad condition. Given the need to show information simple enough to follow, I've created a \"white list\" of sources that are definitely sustainable, and labelled other herring as unsustainable. Greenpeace have no data."
+        },
+        {
+            "name": "Mackerel",
+            "sustainable": "yes",
+            "description": "A dark-fleshed fish often found smoked or canned. Stocks are generally OK but avoid Mediterranean mackarel.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=47"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=mackerel&fish_method_of_production=1&fish_named_capture_area=1&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-a4f3012cdfb181aaac3354c80306bad1&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists mackerel as \"Best Choice\" or \"Good Alternative\", the MCS rates it as 2 (on a scale of 5 where 1 is sustainable and 5 is not), and FishWatch indicate four different kinds of mackerel that are all not considered overfished. Greenpeace have no data."
+        },
+        {
+            "name": "Gurnard",
+            "sustainable": "yes",
+            "description": "A good alternative to cod, gurnard is currently often treated as by-catch and discarded.",
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=gurnard&fish_method_of_production=1&fish_named_capture_area=1&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-bf6527b054b36e9ca07f59ec81a41244&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The MCS lists three different kinds of gurnard, rating them 2-3. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Pangasius",
+            "sustainable": "depends",
+            "description": "A mild-flavoured kind of catfish commonly farmed in Asia. Prefer \"GlobalGap\"-certified fish, as other farmed Pangasius can badly impact the environment.",
+            "categories": [
+              {
+                "name": "GlobalGAP Certified",
+                "sustainable": "yes"
+              },
+              {
+                "name": "Other",
+                "sustainable": "no"
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=103"],
+              ["Marine Conservation Society", "http://www.fishonline.org/fish/basa-tra-catfish-or-vietnamese-river-cobbler-358"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists Pangasius as \"Good Alternative\" but notes that there are \"conservation concerns with the current practice of open cage aquaculture combined with little or no management of these fish farming operations in Asia\". The MCS list \"GlobalGAP\"-certified pangasius as a 3, and indicate a large number of concerns. FishWatch and Greenpeace have no data. The conclusion is that while pangasius can be sustainably farmed, it is often not, and it is best to stick to certified fish. More information would be useful, as there are almost certainly other sustainable sources."
+        },
+        {
+            "name": "Eel",
+            "sustainable": "no",
+            "description": "Long, bottom-feeding fish. Both farmed and wild caught eels are very problematic: Farming produces a lot of pollution and eel fisheries are over-exploiting stocks and causing habitat damage.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=94"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=eel&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-18de8edec65300a17b537694c2fdaffd&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists eel as \"Avoid\", and the MCS lists all types of eel as 5 - very unsustainable. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Seabass",
+            "sustainable": "depends",
+            "description": "A charismatic fish especially prized in Greece.",
+            "mercury": "high",
+            "categories": [
+              {
+                "name": "Farmed",
+                "sustainable": "no",
+                "description": "Farming seabass is associated with pollution and the spread of disease to wild fish. Seabass are carnivorous fish and have to be fed on wild-caught fish that is not sourced from a sustainable supply."
+              },
+              {
+                "name": "Trawled",
+                "sustainable": "no",
+                "description": "Avoid eating seabass caught by trawling, as this is a very damaging form of fishing."
+              },
+              {
+                "name": "Other Wild Caught",
+                "sustainable": "yes",
+                "description": "Seabass stock levels are reasonable, and seabass fished using gentler methods than trawling is considered sustainable."
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=37"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=seabass&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-32c945a2f63b2029019f836717620212&form_id=stfish_search_long_form"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists US white seabass caught with hook-and-line or gillnet as \"Best Choice\"/\"Good Alternative\". The MCS rates trawled seabass as 5, farmed seabass as 4, and seabass caught by other means as 2. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Spider Crab",
+            "sustainable": "yes",
+            "description": "Large orange crabs. Prefer pot-caught spider crabs, as they are more sustainable.",
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=spider&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-d85c93e643a1877e7cca8b117aa16cc2&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The MCS rates spider crabs as 2-3 depending on method of capture. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Squid",
+            "sustainable": "yes",
+            "description": "This entry applies to all types of squid.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=22"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=squid&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-24e2a8a5089cbf794919e28caded1d62&form_id=stfish_search_long_form"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists all squid as \"Best Choice\" and \"Good Alternative\", and the MCS rates squid as 2-3. FishWatch and Greenpeace have no data. Data is lacking about Pacific squid."
+        },
+        {
+            "name": "Tuna",
+            "sustainable": "depends",
+            "description": "A family of large predatory fish with very dark meat.",
+            "mercury": "high",
+            "sources": [
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "categories": [
+                {
+                    "name": "Longline and Purse Seine caught",
+                    "sustainable": "no",
+                    "description": "Longline fishing is a very disruptive method of fishing which kills sharks, turtles and sea birds. Purse seine fishing uses a net that produces a lot of bycatch. Avoid."
+                },
+                {
+                    "name": "Albacore",
+                    "sustainable": "no",
+                    "description": "Albacore flesh is paler than other tuna. Look for albacore from the Pacific caught by troll/pole-and-line fishing, which is more or less sustainable..",
+                    "sources": [
+                      ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=67"],
+                      ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=albacore+tuna&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-5e55b78aea607976b0bf4b40150101b2&form_id=stfish_search_long_form"],
+                      ["FishWatch (North Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atl_albacore.htm"],
+                      ["FishWatch (Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_albacore.htm"]
+                    ],
+                    "explanation": "The Monterey Bay Aquarium indicates that troll and pole-and-line fished Pacific albacore is sustainable. However, Atlantic and longline caught albacore is labeled \"Avoid\". The MCS also rate albacore as 2-5 depending on method of harvesting and stock area. Finally, FishWatch say that Atlantic albacore stock levels are doing badly, but Pacific stock levels are fine. Albacore tuna is also on Greenpeace's red list. So while it is possible to source sustainable albacore, the number of factors to consider are too great, which is why the final verdict is \"unsustainable\"."
+                },
+                {
+                    "name": "Yellowfin",
+                    "sustainable": "no",
+                    "description": "A mid-size tuna popular as an alternative to bluefin. Look for yellowfin from the Atlantic caught by troll/pole-and-line/hand line fishing, which is somewhat sustainable.",
+                    "sources": [
+                      ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=71"],
+                      ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=Yellowfin%20tuna&fish_method_of_production=1&fish_named_capture_area=0&fish_production_country=0&scientific_name=Thunnus%20albacares&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=5&fish_production_method_detail=0&op=Search&form_build_id=form-eda9f6518b6dd286a57022c20b7a604e&form_id=stfish_search_long_form"],
+                      ["FishWatch (Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atl_yellowfin.htm"],
+                      ["FishWatch (Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_yellowfin_tuna.htm"],
+                      ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"]
+                    ],
+                    "explanation": "The Monterey Bay Aquarium lists troll and pole-and-line caught yellowfin as sustainable. The MCS rates yellowfin caught by this method as 3-4, and yellowfin caught by other methods as 4-5. FishWatch states that the Atlantic population is stable but the Pacific one is overfished. As with the albacore, while there are some combinations of geography and fishing methods that may be sustainable, it would be hard to find, which is why the final verdict is \"unsustainable\"."
+                },
+                {
+                    "name": "Skipjack",
+                    "sustainable": "yes",
+                    "description": "A smaller and faster-reproducing tuna, its stocks are currently considered stable.",
+                    "sources": [
+                      ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=70"],
+                      ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=skipjack+tuna&fish_method_of_production=1&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=5&fish_production_method_detail=0&op=Search&form_build_id=form-b9468fdab4dde6b088e0f331ab8a2e83&form_id=stfish_search_long_form"],
+                      ["FishWatch (Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atl_skipjack.htm"],
+                      ["FishWatch (Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_skipjack.htm"]
+                    ],
+                    "explanation": "The Monterey Bay Aquarium rates skipjack that's not caught by purse seine or longline as \"Best Choice\". The MCS rates skipjack not caught by purse seine or longline as 2-3. FishWatch states that both Atlantic and Pacific skipjack is not overfished. Greenpeace has no data."
+                },
+                {
+                    "name": "Bigeye",
+                    "sustainable": "no",
+                    "description": "While there are some stocks that are doing OK, most bigeye stocks are seriously depleted. Bigeye tuna has recently been added to the Greenpeace red list.",
+                    "sources": [
+                      ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=68"],
+                      ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=bigeye+tuna&fish_method_of_production=1&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=5&fish_production_method_detail=0&op=Search&form_build_id=form-3ee61a6ec5f1c4b7addeef0445e8235e&form_id=stfish_search_long_form"],
+                      ["FishWatch (Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atl_bigeye_tuna.htm"],
+                      ["FishWatch (Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_bigeye_tuna.htm"],
+                      ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"]
+                    ],
+                    "explanation": "The Monterey Bay Aquarium labels non-longline fished bigeye as \"Best Choice\"/\"Good Alternative\". However, MCS rates it as 3-5 depending on stock and method of fishing. FishWatch states that Atlantic tuna is not overfished, but Pacific tuna is. Finally, bigeye is on the Greenpeace red list. In conclusion, the data is quite contradictory, which means that the verdict is \"unsustainable\" until some better conclusion can be reached."
+                },
+                {
+                    "name": "Bluefin",
+                    "sustainable": "no",
+                    "description": "A magnificent fish being driven to extinction by a catastrophic failure of management. Do. Not. Eat.",
+                    "sources": [
+                      ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=69"],
+                      ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=bluefin+tuna&fish_method_of_production=1&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=5&fish_production_method_detail=0&op=Search&form_build_id=form-3c6e0105c89cd1905dda1f129fb25dac&form_id=stfish_search_long_form"],
+                      ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/atl_bluefin_tuna.htm"],
+                      ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"]
+                    ],
+                    "explanation": "The Monterey Bay Aquarium list bluefin as \"Avoid\" and the MCS as 5. FishWatch lists it as overfished, and it's on Greenpeace's red list."
+                }
+            ]
+        },
+        {
+          "name": "Spiny Lobster",
+          "sustainable": "depends",
+          "description": "A crustacean that looks similar to a lobster, but lacks claws and has large antennae.",
+          "mercury": "low",
+          "categories": [
+            {
+              "name": "Nicaragua, Honduras, Brazil",
+              "sustainable": "no",
+              "description": "Lobster fisheries in Nicaragua, Honduras and Brazil are plagued with issues of overfishing, catching juveniles, and illegal fishing."
+            },
+            {
+              "name": "Other",
+              "sustainable": "yes"
+            }
+          ],
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=10"],
+            ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/car_spiny_lobster.htm"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "description": "The Monterey Bay Aquarium states that spiny lobster from the US is sustainable, and Caribbean lobster is OK, while lobster from Nicaragua, Honduras and Brazil is rated as \"Avoid\". FishWatch states that Gulf of Mexico and Atlantic populations are fine but Caribbean populations are not monitored. The MCS and Greenpeace have no data."
+        },
+        {
+            "name": "Anchovy",
+            "sustainable": "no",
+            "description": "Small fish, known for their strong flavour when cured.",
+            "mercury": "low",
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=anchovy&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-b51ded413158203fba27da9d3e82fafb&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/anchovy.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The MCS rates anchovy as 3-4 depending on stock and method of capture. FishWatch states that there is no information on the population levels of northern anchovy populations."
+        },
+        {
+          "name": "Halibut",
+          "sustainable": "depends",
+          "description": "A mild, relatively inexpensive flatfish popular for grilling. As bottom-dwellers, one side is typically white while the other is a mottled brown.",
+          "mercury": "high",
+          "categories": [
+              {
+                  "name": "Pacific",
+                  "sustainable": "yes",
+                  "inSeason": ["january", "february", "july", "august", "september", "october", "november", "december"],
+                  "description": "Pacific halibut, landed in Alaska, is sustainable."
+              },
+              {
+                  "name": "Other",
+                  "sustainable": "no",
+                  "description": "Atlantic halibut stocks are seriously depleted."
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=9"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=halibut&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-508d4815103243cbd4430cb2d99b6935&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/pacific_halibut.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists Atlantic and some Pacific halibut as \"Avoid\" and other halibut as \"Good Alternative\", and specifically Alaskan halibut as \"Best Choice\". The MCS rates farmed and Pacific halibut as 2, and Atlantic halibut as 4-5. FishWatch indicates that Pacific halibut populations are healthy. Atlantic halibut is on the Greenpeace red list."
+        },
+        {
+            "name": "Snapper",
+            "sustainable": "no",
+            "description": "A number of reef-dwelling fish species, all overfished. The fishing of snappers, be they red, crimson or otherwise coloured, is also associated with a great deal of bycatch and reef destruction.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=41"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=snapper&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-5925c71275f3f299c80f232fe57af5f7&form_id=stfish_search_long_form"],
+              ["FishWatch (Red Snapper)", "http://www.nmfs.noaa.gov/fishwatch/species/red_snapper.htm"],
+              ["FishWatch (Vermilion Snapper)", "http://www.nmfs.noaa.gov/fishwatch/species/vermilion_snapper.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium list a large number of snapper species, most of them as \"Avoid\", a few as \"Good Alternative\". The MCS rates crimson snapper as 3 and red snapper as 5. FishWatch states that both red and vermilion snapper is overfished. Finally, red snapper is on the Greenpeace red list. In conclusion, while there are some types of snapper that may be somewhat sustainable, it is more practical to label all of them as unsustainable." 
+        },
+        {
+            "name": "Cod",
+            "sustainable": "no",
+            "description": "A very popular mild-flavoured white fish that is sadly very much overfished. Try pollack, coley or gurnard instead.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=7"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=cod&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-412b2e9c04bab35c8bcb7b7ec6310160&form_id=stfish_search_long_form"],
+              ["FishWatch (Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atlantic_cod.htm"],
+              ["FishWatch (Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_cod.htm"],
+              ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "Data on cod is very contradictory, and there is no clear and easy rule to determine what cod is sustainable."
+        },
+        {
+            "name": "Dungeness Crab",
+            "sustainable": "yes",
+            "description": "A popular type of crab with a wide body that is currently rated as very sustainable.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=8"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists dungeness crab as a \"Best Choice\". The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Stone Crab",
+            "sustainable": "yes",
+            "description": "Only the claws of stone crabs are typically eaten. Claws are obtained by catching live crabs, breaking off one claw, and throwing the claw back. The crab then grows back the claw within a year.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=8"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/stone_crab.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists stone crab as a \"Best Choice\", and FishWatch indicates that the nature of harvesting stone crab makes it very sustainable."
+        },
+        {
+            "name": "Pink Shrimp",
+            "sustainable": "no",
+            "description": "Small pink crustaceans.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=20"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/pink_shrimp.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists pink shrimp from the US as a \"Good Alternative\", but advises against pink shrimp from other sources. FishWatch states that some pink shrimp populations are overfished. More information could paint a more accurate picture, but for now the verdict is \"unsustainable\"."
+        },
+        {
+          "name": "Tiger Prawn",
+          "sustainable": "depends",
+          "description": "Tiger prawns are large striped prawns.",
+          "categories": [
+            {
+              "name": "Organic or Zero Input Farmed",
+              "sustainable": "yes",
+              "description": "Organically certified farms vastly reduce the environmental damage that may be caused by prawn farming. Zero input farming insulates the farm from the environment, reducing environmental damage."
+            },
+            {
+              "name": "Other Farmed",
+              "sustainable": "no",
+              "description": "Prawn farming may cause: destruction of habitats through conversion into pond systems, nutrient runoff, freshwater lakes being turned into saltwater and the spread of disease to wild prawns. Prawns require a lot of fishmeal that tends to come from unclear sources."
+            },
+            {
+              "name": "Wild Caught",
+              "sustainable": "no",
+              "description": "Trawl fishing for tiger prawns produces a quarter of the world's by-catch. (Unwanted sea life that is caught and killed alongside the prawns.)"
+            }
+          ],
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=20"],
+            ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=prawn%2C+tiger&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-87088eb63e9f4c466484768f77192512&form_id=stfish_search_long_form"]
+          ],
+          "explanation": "The Monterey Bay Aquarium rates imported tiger prawn as \"Avoid\". The MCS rates all wild fished and intensively farmed tiger prawns as 5. However, the MCS rates organic and zero input farmed tiger prawns as 1-2. FishWatch and Greenpeace have no data."
+        },
+        {
+          "name": "King Prawn",
+          "sustainable": "depends",
+          "description": "Large pink prawns.",
+          "categories": [
+            {
+              "name": "Organic Farmed",
+              "sustainable": "yes",
+              "description": "Organically certified farms reduce the environmental damage that may be caused by prawn farming."
+            },
+            {
+              "name": "Other Farmed",
+              "sustainable": "no",
+              "description": "Prawn farming may cause: destruction of habitats through conversion into pond systems, nutrient runoff, freshwater lakes being turned into saltwater and the spread of disease to wild prawns. Prawns require a lot of fishmeal that tends to come from unclear sources."
+            },
+            {
+              "name": "Wild Caught",
+              "sustainable": "no",
+              "description": "Fished tiger prawns are not environmentally sustainable."
+            }
+          ],
+          "sources": [
+            ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=prawn%2C+king&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-2620bc23bf758089227d91b6422eb215&form_id=stfish_search_long_form"]
+          ],
+          "explanation": "The MCS rates organically farmed king prawns as 1, and prawns from other sources as 3-5. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+          "name": "Northern Prawn/Pink Shrimp",
+          "sustainable": "depends",
+          "description": "Small pink prawns.",
+          "mercury": "low",
+          "categories": [
+            {
+              "name": "US and Canadian",
+              "sustainable": "yes",
+              "description": "Canadian stocks are generally in good shape."
+            },
+            {
+              "name": "Other",
+              "sustainable": "no",
+              "description": "Stocks near Iceland and Norway and in the South Atlantic are depleted."
+            }
+          ],
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=20"],
+            ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=prawn%2C+northern&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-3c0463e00820d6323c06d9b267436880&form_id=stfish_search_long_form"],
+            ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/pink_shrimp.htm"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "explanation": "The Monterey Bay Aquarium rates northern shrimp from the US and Canada as a \"Good Alternative\". The MCS rates prawns coming from the north west atlantic/Canada as 2-3, and from the north east atlantic as 2-4. FishWatch states that population levels in the South Atlantic are low. In conclusion, US and Canadian shrimp appear to be a sustainable option."
+        },
+        {
+          "name": "White Shrimp",
+          "sustainable": "depends",
+          "description": "Medium-sized white shrimp.",
+          "mercury": "low",
+          "categories": [
+            {
+              "name": "Wild Caught",
+              "sustainable": "yes",
+              "description": "Wild populations of white shrimp appear to be plentiful."
+            },
+            {
+              "name": "Farmed in fully recirculating systems or inland ponds",
+              "sustainable": "yes",
+              "description": "Fully recirculating systems and inland ponds reduce the environmental issues associated with shrimp farming."
+            },
+            {
+              "name": "Other Farmed",
+              "sustainable": "no",
+              "description": "Shrimp farming is associated with pollution, habitat destruction, and the spread of diseases."
+            }
+          ],
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=20"],
+            ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/wild_white_shrimp.htm"],
+            ["Wikipedia", "http://en.wikipedia.org/wiki/Shrimp_farm"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "explanation": "The Monterey Bay Aquarium rates both wild caught and farmed white shrimp from the US  as \"Best Choice\"/\"Good Alternative\", but shrimp from other sources as \"Avoid\". FishWatch states that population levels of wild white shrimps are \"high\". The Wikipedia page on shrimp farming lists a large number of environmental issues associated with the practice. The conclusion is that it is the means of farming rather than the source that makes the difference. (The MCS and Greenpeace have no data.)"
+        },
+        {
+            "name": "Sardine",
+            "sustainable": "depends",
+            "description": "Small oily fish often found in tins.",
+            "mercury": "low",
+            "categories": [
+              {
+                "name": "Mediterranean",
+                "sustainable": "no"
+              },
+              {
+                "name": "Other",
+                "sustainable": "yes"
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=30"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=sardine&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-0de3d8b35a0c5d810da3d1eca3d33a9f&form_id=stfish_search_short_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/sardine.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates Mediterranean sardines as \"Avoid\" but Pacific sardines as \"Best Choice\". The MCS rates Mediterranean ones as 4, and other sources as 2-3. Finally, FishWatch states that Pacific sardine stocks are healthy."
+        },
+        {
+            "name": "Crayfish",
+            "sustainable": "depends",
+            "description": "River-dwelling crustaceans resembling small lobsters, commonly farmed in ponds.",
+            "mercury": "low",
+            "categories": [
+              {
+                "name": "US",
+                "sustainable": "yes"
+              },
+              {
+                "name": "Other",
+                "sustainable": "no",
+                "description": "Crayfish from China in particular are not recommended."
+              }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=48"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium states that US farmed crayfish are a \"Best Choice\", but to \"Avoid\" imported ones. The MCS, FishWatch and Greenpeace have no data. So while this view is probably too US-centric, in the absence of further information, US crayfish is rated as sustainable and all other crayfish is not."
+        },
+        {
+            "name": "Grenadier/Hoki/Whiptail",
+            "sustainable": "no",
+            "description": "A long-lived, slow-breeding, deep-sea fish with thin tails. Also called hoki, blue hake or whiptail. Grenadiers only begin breeding at 20 to 40 years. As a result, stocks are very fragile.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=72"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=grenadier&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-f8429a12171104d65d4dd21b70266d55&form_id=stfish_search_long_form"],
+              ["Greenpeace (\"Hoki\")", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates grenadier as \"Avoid\" and the MCS as 3-5. Blue grenadier/hoki is on the Greenpeace red list."
+        },
+        {
+            "name": "Sturgeon",
+            "sustainable": "no",
+            "description": "Large and slow-growing, sturgeon are a very old kind of fish - so old that they do not have scales. Sturgeon can live to more than 100 years of age and only become sexually mature at 20 years or more. They are harvested for caviar.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=24"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=sturgeon&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-0de3d8b35a0c5d810da3d1eca3d33a9f&form_id=stfish_search_short_form"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates US sturgeon as a \"Good Alternative\" but other sturgeon as \"Avoid\". The MCS rates it as 5."
+        },
+        {
+            "name": "Caviar",
+            "sustainable": "no",
+            "description": "Large and slow-growing, sturgeon are a very old kind of fish - so old that they do not have scales. Sturgeon can live to more than 100 years of age and only become sexually mature at 20 years or more. They are harvested for caviar.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=24"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=sturgeon&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-0de3d8b35a0c5d810da3d1eca3d33a9f&form_id=stfish_search_short_form"]
+            ],
+            "explanation": "Caviar is harvested by killing sturgeon. The Monterey Bay Aquarium rates US sturgeon as a \"Good Alternative\" but other sturgeon as \"Avoid\". The MCS rates it as 5."
+        },
+        {
+            "name": "Haddock",
+            "sustainable": "yes",
+            "description": "A popular fish easily recognised by a distinctive black line running along its side. Most haddock stocks are in good condition, but others are in serious trouble, so make sure to look for haddock labelled as coming from sustainable sources.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=59"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=haddock&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-0de3d8b35a0c5d810da3d1eca3d33a9f&form_id=stfish_search_short_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/haddock.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists Atlantic cod as \"Best Choice\"/\"Good Alternative\". The MCS shows a very mixed picture, with some Atlantic populations rated 2, and others rated 5. FishWatch states that US haddock populations are at target levels but does not give information about other populations. In conclusion, haddock is tentatively sustainable. There is unfortunately no easy guide to avoiding the depleted populations apart from relying on labeling."
+        },
+        {
+            "name": "Coley/Saithe",
+            "sustainable": "yes",
+            "description": "A good alternative to cod, recognisable by a distinctive white line running along its side.",
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=coley&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-f48bf4749bc0520caa85574ef84a745f&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The Marine Conservation Society rates coley as 2-3. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Pollock/Pollack",
+            "sustainable": "yes",
+            "description": "A relative of the cod, it is a good alternative to that fish.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=15"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=pollack&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-4933ca0f971ed6439d41af55935d7037&form_id=stfish_search_long_form"],
+              ["FishWatch (Alaska)", "http://www.nmfs.noaa.gov/fishwatch/species/walleye_pollock.htm"],
+              ["FishWatch (Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atl_pollock.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists all pollock apart from Icelandic pollock as \"Best Choice\"/\"Good Alternative\". The MCS rates it as 2-3, and FishWatch indicates that both Alaskan and Atlantic stocks are mostly on target. Greenpeace has no data."
+        },
+        {
+            "name": "Lobster",
+            "sustainable": "no",
+            "description": "Large, large-clawed crustacean. Lobsters can live for at least a hundred years, and there are indications that they may not die of old age at all. Lobster stocks are inaedequately managed and monitored.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=10"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=lobster&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-94eb404bb3b0b6879a55f2be7dae94e6&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/amer_lobster.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates US lobster as \"Best Choice\"/\"Good Alternative\", and Brazilian lobster as \"Avoid\". FishWatch partially contradicts this, stating that Southern New England lobster is overfished. Finally, the MCS heavily contradicts this, rating all lobster as 3-5, specifically calling the management and sustainability of Maine lobster into question. Given this contradiction, the verdict is \"unsustainable\"."
+        },
+        {
+            "name": "Sole",
+            "sustainable": "depends",
+            "mercury": "low",
+            "categories": [
+                {
+                    "name": "Common/Dover Sole",
+                    "sustainable": "no",
+                    "description": "Compared to the lemon sole, this fish is more elongated. It is badly overfished and should be avoided."
+                },
+                {
+                    "name": "Other",
+                    "sustainable": "yes",
+                    "description": "A popular reddish-brown flatfish."
+                }
+            ],
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=98"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=sole&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-6b11153c61e3bd4418aca1d2177dd4f6&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/"],
+              ["FDA Mercury Table (\"Flatfish\")", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists Pacific sole (and related flatfish?) as a \"Good Alternative\", and Atlantic sole as \"Avoid\". The MCS lists common/dover sole as 2-5 depending on the specific stock area. Lemon sole, on the other hand, is rated 2-3. FishWatch states that most sole species in US fisheries are not overfished."
+        },
+        {
+            "name": "Mahi-Mahi/Dolphinfish",
+            "sustainable": "yes",
+            "description": "A large, bright yellow fish with a large back fin.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=11"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=mahi&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-079e6663ff27c9b6eab58e3f4122e4d1&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/dolphinfish.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists mahi mahi from the US as \"Best Choice\" and other non-longline fished mahi mahi as a \"Good Alternative\". The MCS rates it as 2-3, and FishWatch states that while population levels are not formally assessed they are assumed to be stable. As a large and badly monitored fish, it is potentially threatened, but in the absence of evidence for this, it is labeled as \"sustainable\"."
+        },
+        {
+            "name": "Turbot",
+            "sustainable": "depends",
+            "description": "A large flatfish prized for its white, subtly-flavoured flesh.",
+            "categories": [
+              {
+                "name": "farmed",
+                "sustainable": "yes"
+              },
+              {
+                "name": "wild caught",
+                "sustainable": "no"
+              }
+            ],
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=turbot&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-ffe4550792f458d2dd9be74dc12c00b9&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/green_turbot.htm"]
+            ],
+            "explanation": "The MCS rates all wild caught turbot as 4-5, but (onshore open circuit) farmed turbot as 2. FishWatch states that Greenland turbot populations are healthy. Given the contradiction, wild caught turbot is labeled as \"unsustainable\" and farmed turbot as \"sustainable\"."
+        },
+        {
+            "name": "Monkfish",
+            "sustainable": "no",
+            "description": "A bottom-dwelling anglerfish with a wide toothy mouth. Also known as ankoh, angler  or goosefish. Monkfish are caught by bottom trawls that badly damage the seafloor and produce a lot of bycatch, or by gillnets that kill turtles and dolphins.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=13"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=monkfish&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-4f292e5161a330620710d1784b281a9b&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/monkfish.htm"],
+              ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates all monkfish as \"Avoid\" and the MCS rates it as 3-4. It is also on the Greenpeace red list. FishWatch contradicts this, stating that (US?) monkfish is being harvested at sustainable levels. Given this contradiction, monkfish is currently rated as \"unsustainable\", and more data would be helpful."
+        },
+        {
+            "name": "Dogfish",
+            "sustainable": "no",
+            "description": "Dogfish are small sharks, and as such are not sustainable, as they are few in number and reproduce only slowly.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=54"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=dogfish&fish_method_of_production=1&fish_named_capture_area=1&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-0de3d8b35a0c5d810da3d1eca3d33a9f&form_id=stfish_search_short_form"],
+              ["FishWatch (Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/atl_spiny_dogfish.htm"],
+              ["FishWatch (Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_spiny_dog.htm"],
+              ["FDA Mercury Table (\"Shark\")", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates most dogfish as \"Avoid\". The MCS rates dogfish as 3-5, while FishWatch states that Atlantic stocks are fine while the status of Pacific stocks is unknown. The MCS also states that dogfish are vulnerable to exploitation due to being slow-growing and slow-maturing."
+        },
+        {
+            "name": "Plaice",
+            "sustainable": "no",
+            "description": "A very popular and very overfished flatfish.",
+            "mercury": "low",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=85"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=plaice&fish_method_of_production=1&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-0de3d8b35a0c5d810da3d1eca3d33a9f&form_id=stfish_search_short_form"],
+              ["FDA Mercury Table (\"Flatfish\")", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists Pacific and Icelandic plaice as a \"Good Alternative\", but Atlantic plaice as \"Avoid\". The MCS rates plaice as 3-5. Given there is no easy way to distinguish between somewhat sustainable stocks and non-sustainable ones, the verdict is \"unsustainable\". FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "Skate",
+            "sustainable": "no",
+            "description": "Cartilaginous fish with \"wings\" and a long, thin tail. They are severely overfished and in decline.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=73"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=skate&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-f8f1c8db30cdf241e488552b107d8732&form_id=stfish_search_long_form"],
+              ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates all skates as \"Avoid\", and the MCS rate all skates as 5. Skates are on the Greenpeace red list. FishWatch has no data."
+        },
+        {
+            "name": "Ray",
+            "sustainable": "no",
+            "description": "Cartilaginous fish with \"wings\" and a long, thin tail. They are severely overfished and in decline.",
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=ray&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-713eec460d4477455715fa86ce83823b&form_id=stfish_search_long_form"],
+              ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"]
+            ],
+            "explanation": "The MCS lists a number of different ray species and rates them as 3-5. Greenpeace has rays on its red list. The Monterey Bay Aquarium and FishWatch have no data."
+        },
+        {
+            "name": "Shark",
+            "sustainable": "no",
+            "description": "Predatory cartilaginous fish. They are too rare and slow-reproducing to be a sustainable food source. Many sharks are killed just for their fins, which are cut off with the shark thrown overboard to die.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=54"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=shark&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-d6670abc1cdb97210e984767ae232d8e&form_id=stfish_search_long_form"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/"],
+              ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates all sharks as \"Avoid\". The MCS rates all sharks as 5. FishWatch track two shark species, thresher shark and mako shark, whose stocks are either unknown or overfished. Finally, sharks are on the Greenpeace red list."
+        },
+        {
+            "name": "Swordfish",
+            "sustainable": "depends",
+            "mercury": "high",
+            "categories": [
+              {
+                "name": "Hawaii, California, Oregon",
+                "sustainable": "yes",
+                "description": "However, the fisheries in the waters off California, Oregon and Hawaii are well managed."
+              },
+              {
+                "name": "Other",
+                "sustainable": "no"
+              }
+            ],
+            "description": "Nearly all swordfish is caught by longline, which is a very disruptive method that kills sharks, turtles and sea birds. Swordfish reproduce too slowly to be a sustainable food fish.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=25"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=Swordfish&fish_method_of_production=1&fish_named_capture_area=0&fish_production_country=0&scientific_name=Xiphias+gladius&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=5&fish_production_method_detail=0&op=Search&form_build_id=form-a6ab44989972b6332c1fafe6fcac1135&form_id=stfish_search_long_form"],
+              ["FishWatch (North Atlantic)", "http://www.nmfs.noaa.gov/fishwatch/species/n_atl_swordfish.htm"],
+              ["FishWatch (North Pacific)", "http://www.nmfs.noaa.gov/fishwatch/species/pac_swordfish.htm"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium lists Hawaiian and some US swordfish as \"Best Choice\", but other US swordfish as \"Good Alternative\", and other swordfish as \"Avoid\". The MCS lists swordfish as 2-5 depending on source. FishWatch states that North Atlantic and North Pacific stocks are not overfished. Swordfish is also on the Greenpeace red list, but they state that Hawaiian, Californian and Oregonian swordfish is well managed and a good alternative."
+        },
+        {
+            "name": "Marlin",
+            "sustainable": "no",
+            "description": "A large and very fast predatory fish with a large back fin. Stocks are in very poor condition and very badly managed.",
+            "mercury": "high",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=62"],
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=marlin&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-bddd291461261c6946bd1414d5e06a60&form_id=stfish_search_long_form]"],
+              ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates most marlin as \"Avoid\", with the exception of Hawaiian marlin, which is rates as a \"Good Alternative\". The MCS rates all marlin as 5. FishWatch and Greenpeace have no data."
+        },
+        {
+            "name": "King Crab",
+            "sustainable": "depends",
+            "mercury": "low",
+            "categories": [
+              {
+                "name": "US",
+                "sustainable": "yes"
+              },
+              {
+                "name": "Other",
+                "sustainable": "no"
+              }
+            ],
+            "description": "Large, red, spiky crabs. Critically overfished in Russia, where most imported crabs come from. US-sourced king crab may be OK.",
+            "sources": [
+              ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=8"],
+              ["FishWatch", "http://www.nmfs.noaa.gov/fishwatch/species/red_king_crab.htm"],
+              ["FDA Mercury Table (\"Crab\")", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+            ],
+            "explanation": "The Monterey Bay Aquarium rates US king crab as a \"Good Alternative\", but other king crab as \"Avoid\". FishWatch state that US king crab is not overfished."
+        },
+        {
+            "name": "Brown Crab",
+            "sustainable": "yes",
+            "description": "A reddish-brown crab with an oval carapace sporting a characteristic wavy \"pie crust\" edge. Stocks may be on the brink of decline.",
+            "sources": [
+              ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=crab&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&scientific_name=&fish_farmed_type=0&fish_capture_method_detail=0&fish_stock_area=0&fish_production_area=0&page_size=10&fishonline_rating=0&fish_stock_detail=0&fish_production_method_detail=0&op=Search&form_build_id=form-48c5965dd9ad9c7e9b303e02c3c4b2a6&form_id=stfish_search_long_form"]
+            ],
+            "explanation": "The Marine Conservation Society rates pot-caught crab as 3, and raises concerns that the stock levels are showing indications of declining, and are not formally assessed. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+          "name": "Pouting/Bib",
+          "sustainable": "yes",
+          "description": "Living on the European coast, pouting is mostly caught as bycatch. Eat it instead of having it thrown back or ground into fishmeal.",
+          "sources": [
+            ["Marine Conservation Society", "http://www.fishonline.org/fish/pouting-or-bib-78"]
+          ],
+          "explanation": "The MCS rates pouting as 2. The Monterey Bay Aquarium, FishWatch and Greenpeace have no data."
+        },
+        {
+          "name": "John Dory",
+          "sustainable": "no",
+          "description": "Recognizable by a dark spot on its side and a spiny crest, the john dory or peter's fish is vulnerable and often taken as bycatch from trawls.",
+          "sources": [
+            ["Marine Conservation Society", "http://www.fishonline.org/search-results?common_name=dory&fish_method_of_production=0&fish_named_capture_area=0&fish_production_country=0&fish_production_method_detail=0&scientific_name=&fish_capture_method_detail=0&fish_farmed_type=0&fish_stock_detail=0&fish_production_area=0&op=Search&form_build_id=form-07b67eefeb6c70df697a354a3a68a5f2&form_id=stfish_search_short_form"]
+          ],
+          "explanation": "The MCS rates john dory as 3-4 depending on stock area and method of fishing."
+        },
+        {
+          "name": "Walleye (US)",
+          "sustainable": "yes",
+          "mercury": "high",
+          "description": "The walleye, not to be confused with the walleye pollock, is a fish from the US great lakes. The Environmental Defense Fund has issued a consumption advisory for walleye due to high levels of mercury and PCBs.",
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?gid=93"]
+          ],
+          "explanation": "The Monterey Bay Aquarium rates walleye as a \"Good Alternative\". The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+          "name": "Yellow Perch (US)",
+          "sustainable": "yes",
+          "mercury": "high",
+          "description": "The yellow perch is a predatory fish from the US great lakes. The Environmental Defense Fund has issued a consumption advisory for walleye due to high levels of mercury and PCBs.",
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?fid=243"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "explanation": "The Monterey Bay Aquarium rates yellow perch as a \"Best Choice\"/\"Good Alternative\". The MCS, FishWatch and Greenpeace have no data."
+        },
+        {
+          "name": "Orange Roughy/Slimehead",
+          "sustainable": "no",
+          "mercury": "high",
+          "description": "A large sedentary fish living in deep waters. It is slow-growing and late to mature, and not sustainable as a food source.",
+          "sources": [
+            ["Monterey Bay Aquarium", "http://www.montereybayaquarium.org/cr/SeafoodWatch/web/sfw_factsheet.aspx?fid=54"],
+            ["Greenpeace", "http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/"],
+            ["FDA Mercury Table", "http://www.fda.gov/food/foodsafety/product-specificinformation/seafood/foodbornepathogenscontaminants/methylmercury/ucm115644.htm"]
+          ],
+          "explanation": "The Monterey Bay Aquarium rates orange roughy as \"Avoid\", and it's on the Greenpeace red list. The MCS and FishWatch and have no data."
+        }
+    ]
+}
