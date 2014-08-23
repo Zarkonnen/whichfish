@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en-en' manifest='http://whichfish.org/app.appcache' xml:lang='en-en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='en' name='lang' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name="description" content="{{description}}" />
+    <meta name="keywords" content="{{keywords}}" />
+    <title>{{name}}</title>
+    <link href='css/screen.css' media='all' rel='stylesheet' type='text/css' />
+
+    <!-- %link{:id => "favicon", :rel => "icon", :type => "image/png", :href => uri("/icon/16/16/#{ratio}.png")}/ -->
+    <!-- %link{:id => "touch", :rel => "apple-touch-icon", :href => uri("/icon/57/57/#{ratio}.png")}/ -->
+    <!-- %link{:id => "retina", :rel => "apple-touch-icon", :sizes => "114x114", :href => uri("/icon/114/114/#{ratio}.png")}/ -->
+    <link href='i/favicon.png' id='favicon' rel='icon' type='image/png' />
+    <link href='i/touch.png' id='touch' rel='apple-touch-icon' />
+    <link href='i/retina.png' id='retina' rel='apple-touch-icon' sizes='114x114' />
+    
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Selects the data sheet for the current month.
+        var date = new Date();
+        var monthID = "month-" + date.getMonth();
+        $("#year").hide();
+        var monthList = $("#" + monthID).show();
+        var monthItems = monthList.find("li");
+        
+        // Quick search.
+        $("#searchBox").show().keyup(function() {
+          var searchTerm = $("#searchBox").val().toLowerCase();
+          monthItems.each(function() {
+            var item = $(this);
+            if (item.text().toLowerCase().indexOf(searchTerm) == -1) {
+              item.css("display", "none");
+            } else {
+              item.css("display", "block");
+            }
+          });
+        }).focus(function() {
+          if ($("#searchBox").val() == "Search") {
+            $("#searchBox").val("");
+          }
+        });
+      });
+    </script>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1304555-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+    <div id='page'>
+      <div id='versions'>{{versions}}</div>
+      <h1>
+        {{name}}
+      </h1>
+      <p>{{slogan}}</p>
+      <input type="text" value="Search" placeholder="Search" id="searchBox" style="display: none;" />
+      <ol>
+        {{contents}}
+      </ol>
+
+      <h2>Sources:</h2>
+      <ol>
+        {{sources}}
+      </ol>
+      <span class="explanation">{{explanation}}</span>
+      <p>
+        Project and data collation by <a href="http://zarkonnen.com/">David Stark</a><br />
+        Design inspired by <a href='http://donotremove.co.uk'>Mike</a><br />
+        <a href="http://twitter.com/#!/which_fish">Follow us on Twitter</a><br />
+      </p>
+      <p>
+        Raw data in <a href="http://whichfish.org/fish.json">JSON</a> and <a href="fish.csv">as a spreadsheet</a>. Feel free to use.
+      </p>
+      <p>
+        Disclaimer: sustainability data is simplified for ease of use, and may contain inaccuracies.<br />
+        <a href="mailto:david.stark@zarkonnen.com">Contact me with suggestions/corrections.</a>
+      </p>
+    </div>
+  </body>
+</html>
