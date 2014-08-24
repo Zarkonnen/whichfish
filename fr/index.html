@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang='en-en' manifest='http://whichfish.org/app.appcache' xml:lang='en-en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='en' name='lang' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name="description" content="Un guide des poissons soutenables." />
+    <meta name="keywords" content="poisson, guide, soutenabilité, durabilité" />
+    <title>Quel Poisson?</title>
+    <link href='css/screen.css' media='all' rel='stylesheet' type='text/css' />
+
+    <!-- %link{:id => "favicon", :rel => "icon", :type => "image/png", :href => uri("/icon/16/16/#{ratio}.png")}/ -->
+    <!-- %link{:id => "touch", :rel => "apple-touch-icon", :href => uri("/icon/57/57/#{ratio}.png")}/ -->
+    <!-- %link{:id => "retina", :rel => "apple-touch-icon", :sizes => "114x114", :href => uri("/icon/114/114/#{ratio}.png")}/ -->
+    <link href='i/favicon.png' id='favicon' rel='icon' type='image/png' />
+    <link href='i/touch.png' id='touch' rel='apple-touch-icon' />
+    <link href='i/retina.png' id='retina' rel='apple-touch-icon' sizes='114x114' />
+    
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Selects the data sheet for the current month.
+        var date = new Date();
+        var monthID = "month-" + date.getMonth();
+        $("#year").hide();
+        var monthList = $("#" + monthID).show();
+        var monthItems = monthList.find("li");
+        
+        // Quick search.
+        $("#searchBox").show().keyup(function() {
+          var searchTerm = $("#searchBox").val().toLowerCase();
+          monthItems.each(function() {
+            var item = $(this);
+            if (item.text().toLowerCase().indexOf(searchTerm) == -1) {
+              item.css("display", "none");
+            } else {
+              item.css("display", "block");
+            }
+          });
+        }).focus(function() {
+          if ($("#searchBox").val() == "Search") {
+            $("#searchBox").val("");
+          }
+        });
+      });
+    </script>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1304555-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+    <div id='page'>
+      <div id='versions'><a href="http://de.whichfish.org">de</a> <a href="http://whichfish.org">en</a> fr</div>
+      <h1>
+        Quel Poisson?
+      </h1>
+      <p>Un guide des poissons soutenables.</p>
+      <input type="text" value="Search" placeholder="Search" id="searchBox" style="display: none;" />
+      <ol>
+        <span id="year">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-0" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)<br><span class="notinseason">pas en saison</span></li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-1" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-2" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-3" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-4" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-5" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-6" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-7" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)</li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-8" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)<br><span class="notinseason">pas en saison</span></li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-9" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)<br><span class="notinseason">pas en saison</span></li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-10" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)<br><span class="notinseason">pas en saison</span></li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+<span id="month-11" style="display: none;">
+  <a href="detail/aiglefin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aiglefin</li></a>
+<a href="detail/anchois_atlantique.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchois (Atlantique)</li></a>
+<a href="detail/anchois_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchois (Autres)</li></a>
+<a href="detail/anguille.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anguille</li></a>
+<a href="detail/bar_rayé.html"><li class='yes'><img src="i/tick.png" alt="yes">Bar rayé<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/barramundi_états-unis___europe___australie.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (États-Unis / Europe / Australie)</li></a>
+<a href="detail/barramundi_production_fermée.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Production Fermée)</li></a>
+<a href="detail/barramundi_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Autres)</li></a>
+<a href="detail/baudroie_diable_de_mer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Baudroie/Diable de mer<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/brème_dorade_dorade_royale_-_aquaculture_bio.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Dorade royale - Aquaculture Bio)</li></a>
+<a href="detail/brème_dorade_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brème/Dorade (Autres)</li></a>
+<a href="detail/calmar_calamari_de_l'inde,_la_chine,_la_thaïlande.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Calmar (Calamari de l'Inde, la Chine, la Thaïlande)</li></a>
+<a href="detail/calmar_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Calmar (Autres)</li></a>
+<a href="detail/coque_dragué.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coque (Dragué)</li></a>
+<a href="detail/coque_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Coque (Autres)</li></a>
+<a href="detail/couteau_(bivalve).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Couteau (Bivalve)</li></a>
+<a href="detail/crabe_dormeur.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe dormeur</li></a>
+<a href="detail/crabe_royal_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe royal (États-Unis)</li></a>
+<a href="detail/crabe_royal_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crabe royal (Autres)</li></a>
+<a href="detail/crabe-araignée.html"><li class='yes'><img src="i/tick.png" alt="yes">Crabe-araignée</li></a>
+<a href="detail/crevette_géante_tigrée_bio,_certifié_asc_ou_globalgap.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette géante tigrée (Bio, certifié ASC ou GlobalGAP)</li></a>
+<a href="detail/crevette_géante_tigrée_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Autres Aquacultures)</li></a>
+<a href="detail/crevette_géante_tigrée_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette géante tigrée (Prise Sauvage)</li></a>
+<a href="detail/crevette_nordique_alaska_et_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Alaska et Canada)</li></a>
+<a href="detail/crevette_nordique_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Crevette nordique (Certifié MSC)</li></a>
+<a href="detail/crevette_nordique_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crevette nordique (Autres)</li></a>
+<a href="detail/dorade_tropicale.html"><li class='yes'><img src="i/tick.png" alt="yes">Dorade tropicale</li></a>
+<a href="detail/doré_jaune.html"><li class='yes'><img src="i/tick.png" alt="yes">Doré jaune<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_pêche_en_harpon.html"><li class='yes'><img src="i/tick.png" alt="yes">Espadon (Pêche en Harpon)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/espadon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Espadon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/esturgeon___caviar_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Esturgeon / Caviar (Aquaculture)</li></a>
+<a href="detail/esturgeon___caviar_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Esturgeon / Caviar (Prise Sauvage)</li></a>
+<a href="detail/flet_commun.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flet commun</li></a>
+<a href="detail/gambas_aquaculture_biologique.html"><li class='yes'><img src="i/tick.png" alt="yes">Gambas (Aquaculture biologique)</li></a>
+<a href="detail/gambas_autres_aquacultures.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Autres Aquacultures)</li></a>
+<a href="detail/gambas_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Gambas (Prise Sauvage)</li></a>
+<a href="detail/grenadier.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier</li></a>
+<a href="detail/grondin.html"><li class='yes'><img src="i/tick.png" alt="yes">Grondin</li></a>
+<a href="detail/hareng_mer_du_nord.html"><li class='yes'><img src="i/tick.png" alt="yes">Hareng (Mer du Nord)</li></a>
+<a href="detail/hareng_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hareng (Autres)</li></a>
+<a href="detail/homard_mexique_et_europe.html"><li class='yes'><img src="i/tick.png" alt="yes">Homard (Mexique et Europe)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/homard_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Homard (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/huître.html"><li class='yes'><img src="i/tick.png" alt="yes">Huître</li></a>
+<a href="detail/langouste_nicaragua,_honduras,_brésil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Langouste (Nicaragua, Honduras, Brésil)</li></a>
+<a href="detail/langouste_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Langouste (Autres)</li></a>
+<a href="detail/lieu_jaune_colin.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu jaune/Colin</li></a>
+<a href="detail/lieu_noir_colin_islande.html"><li class='yes'><img src="i/tick.png" alt="yes">Lieu noir/Colin (Islande)</li></a>
+<a href="detail/lieu_noir_colin_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lieu noir/Colin (Autres)</li></a>
+<a href="detail/limande_commune.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Limande commune</li></a>
+<a href="detail/loup_de_mer_aquaculture_avec_le_système_de_recirculation.html"><li class='yes'><img src="i/tick.png" alt="yes">Loup de mer (Aquaculture avec le système de recirculation)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/loup_de_mer_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Loup de mer (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/maquereau.html"><li class='yes'><img src="i/tick.png" alt="yes">Maquereau</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/morue.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Morue</li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/omble_chevalier.html"><li class='yes'><img src="i/tick.png" alt="yes">Omble chevalier</li></a>
+<a href="detail/palourde_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Palourde (Ocean Quahog)</li></a>
+<a href="detail/palourde_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Autres)</li></a>
+<a href="detail/pangasius_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Autres)</li></a>
+<a href="detail/perchaude.html"><li class='yes'><img src="i/tick.png" alt="yes">Perchaude<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/perche_commune.html"><li class='yes'><img src="i/tick.png" alt="yes">Perche commune</li></a>
+<a href="detail/plie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plie</li></a>
+<a href="detail/poisson_montre.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Poisson montre<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/poisson-chat.html"><li class='yes'><img src="i/tick.png" alt="yes">Poisson-chat</li></a>
+<a href="detail/raie.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Raie</li></a>
+<a href="detail/requin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Requin<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/saint-pierre_zeus_faber.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saint-Pierre/Zeus Faber</li></a>
+<a href="detail/sandre.html"><li class='yes'><img src="i/tick.png" alt="yes">Sandre</li></a>
+<a href="detail/sardine_méditerranée.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Méditerranée)</li></a>
+<a href="detail/sardine_autres.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Autres)</li></a>
+<a href="detail/saumon_aquaculture_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Aquaculture Bio)</li></a>
+<a href="detail/saumon_coho___saumon_argenté_us_canadien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Coho / Saumon Argenté US/Canadien)</li></a>
+<a href="detail/saumon_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Saumon (Alaska)<br><span class="notinseason">pas en saison</span></li></a>
+<a href="detail/saumon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Saumon (Autres)</li></a>
+<a href="detail/sole_certifié_msc.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Certifié MSC)</li></a>
+<a href="detail/sole_pacifique.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacifique)</li></a>
+<a href="detail/sole_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Autres)</li></a>
+<a href="detail/tacaud.html"><li class='yes'><img src="i/tick.png" alt="yes">Tacaud</li></a>
+<a href="detail/thon_bonite,_jaune_et_blanc_du_pacifique_pêché_à_la_traîne.html"><li class='yes'><img src="i/tick.png" alt="yes">Thon (Bonite, Jaune et Blanc du Pacifique pêché à la traîne)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/thon_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thon (Autres)<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/truite_truite_arc-en-ciel.html"><li class='yes'><img src="i/tick.png" alt="yes">Truite (Truite arc-en-ciel)</li></a>
+<a href="detail/truite_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Truite (Autres)</li></a>
+<a href="detail/turbot_aquaculture.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Aquaculture)</li></a>
+<a href="detail/turbot_prise_sauvage.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Prise Sauvage)</li></a>
+<a href="detail/vivaneau.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Vivaneau<br><span class="mercury">Mercure</span></li></a>
+<a href="detail/écrevisse_états-unis.html"><li class='yes'><img src="i/tick.png" alt="yes">Écrevisse (États-Unis)</li></a>
+<a href="detail/écrevisse_autres.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Écrevisse (Autres)</li></a>
+</span>
+      </ol>
+
+      <h2>Sources:</h2>
+      <ol>
+        <li><a href="http://www.montereybayaquarium.org/cr/cr_seafoodwatch/sfw_recommendations.aspx?c=ln">Monterey Bay Aquarium</a></li>
+<li><a href="http://www.fishonline.org/">Marine Conservation Society</a></li>
+<li><a href="http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/">Greenpeace</a></li>
+<li><a href="http://en.wikipedia.org/">Wikipedia</a></li>
+<li><a href="http://www.fda.gov/food/foodborneillnesscontaminants/metals/ucm115644.htm">FDA Mercury Table</a></li>
+      </ol>
+      <span class="explanation"><p>Information was compiled from four main sources: the Monterey Bay Aquarium, the Marine Conservation Society, FishWatch, and the Greenpeace Red List. Individual entries have lists of sources, and I have aimed to reach a verdict solely based on the information contained in the sources. MCS ratings of 1-2 are considered "sustainable", and a rating of 3 is acceptable if other sources label the fish as sustainable.</p><p>Where there was serious contradiction, or the differences between sustainable and unsustainable sources of a fish was too involved, I have erred on the side of caution.</p><p>Mercury information is taken from the FDA Mercury table. Fish with a mean mercury PPM of less than 0.1 are considered low in mercury.</p><p>With some fish labeled unsustainable there will be exceptions where you can source them sustainably from specific places. To highlight these sources and mention updates, I've started a twitter stream at <a href="http://twitter.com/#!/which_fish">@which_fish</a>.</p></span>
+      <p>
+        Project and data collation by <a href="http://zarkonnen.com/">David Stark</a><br />
+        Design inspired by <a href='http://donotremove.co.uk'>Mike</a><br />
+        <a href="http://twitter.com/#!/which_fish">Follow us on Twitter</a><br />
+      </p>
+      <p>
+        Raw data in <a href="http://whichfish.org/fish.json">JSON</a> and <a href="fish.csv">as a spreadsheet</a>. Feel free to use.
+      </p>
+      <p>
+        Disclaimer: sustainability data is simplified for ease of use, and may contain inaccuracies.<br />
+        <a href="mailto:david.stark@zarkonnen.com">Contact me with suggestions/corrections.</a>
+      </p>
+    </div>
+  </body>
+</html>

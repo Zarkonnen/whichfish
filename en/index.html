@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang='en-en' manifest='http://whichfish.org/app.appcache' xml:lang='en-en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='en' name='lang' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name="description" content="A quick guide on which fish are sustainable to eat" />
+    <meta name="keywords" content="fish, guide, sustainability" />
+    <title>Which Fish?</title>
+    <link href='css/screen.css' media='all' rel='stylesheet' type='text/css' />
+
+    <!-- %link{:id => "favicon", :rel => "icon", :type => "image/png", :href => uri("/icon/16/16/#{ratio}.png")}/ -->
+    <!-- %link{:id => "touch", :rel => "apple-touch-icon", :href => uri("/icon/57/57/#{ratio}.png")}/ -->
+    <!-- %link{:id => "retina", :rel => "apple-touch-icon", :sizes => "114x114", :href => uri("/icon/114/114/#{ratio}.png")}/ -->
+    <link href='i/favicon.png' id='favicon' rel='icon' type='image/png' />
+    <link href='i/touch.png' id='touch' rel='apple-touch-icon' />
+    <link href='i/retina.png' id='retina' rel='apple-touch-icon' sizes='114x114' />
+    
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Selects the data sheet for the current month.
+        var date = new Date();
+        var monthID = "month-" + date.getMonth();
+        $("#year").hide();
+        var monthList = $("#" + monthID).show();
+        var monthItems = monthList.find("li");
+        
+        // Quick search.
+        $("#searchBox").show().keyup(function() {
+          var searchTerm = $("#searchBox").val().toLowerCase();
+          monthItems.each(function() {
+            var item = $(this);
+            if (item.text().toLowerCase().indexOf(searchTerm) == -1) {
+              item.css("display", "none");
+            } else {
+              item.css("display", "block");
+            }
+          });
+        }).focus(function() {
+          if ($("#searchBox").val() == "Search") {
+            $("#searchBox").val("");
+          }
+        });
+      });
+    </script>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1304555-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+    <div id='page'>
+      <div id='versions'><a href="http://de.whichfish.org">de</a> en <a href="http://fr.whichfish.org">fr</a></div>
+      <h1>
+        Which Fish?
+      </h1>
+      <p>With fish stocks under pressure, which are okay to eat?</p>
+      <input type="text" value="Search" placeholder="Search" id="searchBox" style="display: none;" />
+      <ol>
+        <span id="year">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-0" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)<br><span class="notinseason">not in season</span></li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-1" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-2" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-3" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-4" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-5" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-6" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-7" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)</li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-8" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)<br><span class="notinseason">not in season</span></li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-9" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)<br><span class="notinseason">not in season</span></li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-10" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)<br><span class="notinseason">not in season</span></li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+<span id="month-11" style="display: none;">
+  <a href="detail/anchovy_atlantic.html"><li class='yes'><img src="i/tick.png" alt="yes">Anchovy (Atlantic)</li></a>
+<a href="detail/anchovy_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Anchovy (Other)</li></a>
+<a href="detail/arctic_char.html"><li class='yes'><img src="i/tick.png" alt="yes">Arctic Char</li></a>
+<a href="detail/barramundi_us_europe_australia.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (US/Europe/Australia)</li></a>
+<a href="detail/barramundi_closed_production.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Closed Production)</li></a>
+<a href="detail/barramundi_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Other)</li></a>
+<a href="detail/bream_organic_farmed_gilthead_bream.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Organic Farmed Gilthead Bream)</li></a>
+<a href="detail/bream_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Bream (Other)</li></a>
+<a href="detail/brown_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Brown Crab</li></a>
+<a href="detail/catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Catfish</li></a>
+<a href="detail/clam_ocean_quahog.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Clam (Ocean Quahog)</li></a>
+<a href="detail/clam_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Clam (Other)</li></a>
+<a href="detail/cockle_dredged.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cockle (Dredged)</li></a>
+<a href="detail/cockle_hand_gathered.html"><li class='yes'><img src="i/tick.png" alt="yes">Cockle (Hand Gathered)</li></a>
+<a href="detail/cod.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Cod</li></a>
+<a href="detail/coley_saithe_iceland.html"><li class='yes'><img src="i/tick.png" alt="yes">Coley/Saithe (Iceland)</li></a>
+<a href="detail/coley_saithe_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Coley/Saithe (Other)</li></a>
+<a href="detail/crayfish_us.html"><li class='yes'><img src="i/tick.png" alt="yes">Crayfish (US)</li></a>
+<a href="detail/crayfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Crayfish (Other)</li></a>
+<a href="detail/dab.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dab</li></a>
+<a href="detail/dogfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dogfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/eel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Eel</li></a>
+<a href="detail/european_perch.html"><li class='yes'><img src="i/tick.png" alt="yes">European Perch</li></a>
+<a href="detail/flounder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flounder</li></a>
+<a href="detail/grenadier_hoki_whiptail.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Hoki/Whiptail</li></a>
+<a href="detail/gurnard.html"><li class='yes'><img src="i/tick.png" alt="yes">Gurnard</li></a>
+<a href="detail/haddock.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Haddock</li></a>
+<a href="detail/herring_north_sea.html"><li class='yes'><img src="i/tick.png" alt="yes">Herring (North Sea)</li></a>
+<a href="detail/herring_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herring (Other)</li></a>
+<a href="detail/john_dory.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">John Dory</li></a>
+<a href="detail/king_crab_us.html"><li class='yes'><img src="i/tick.png" alt="yes">King Crab (US)</li></a>
+<a href="detail/king_crab_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Crab (Other)</li></a>
+<a href="detail/king_prawn_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">King Prawn (Organic Farmed)</li></a>
+<a href="detail/king_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Other Farmed)</li></a>
+<a href="detail/king_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">King Prawn (Wild Caught)</li></a>
+<a href="detail/lobster_mexican_and_european.html"><li class='yes'><img src="i/tick.png" alt="yes">Lobster (Mexican and European)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/lobster_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lobster (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mackerel.html"><li class='yes'><img src="i/tick.png" alt="yes">Mackerel</li></a>
+<a href="detail/mahi-mahi_dolphinfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Mahi-Mahi/Dolphinfish</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/monkfish.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Monkfish<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/mussels.html"><li class='yes'><img src="i/tick.png" alt="yes">Mussels</li></a>
+<a href="detail/northern_prawn.html"><li class='yes'><img src="i/tick.png" alt="yes">Northern Prawn</li></a>
+<a href="detail/orange_roughy_slimehead.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Orange Roughy/Slimehead<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/oysters.html"><li class='yes'><img src="i/tick.png" alt="yes">Oysters</li></a>
+<a href="detail/pangasius_certifié_globalgap_asc.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (Certifié GlobalGAP/ASC)</li></a>
+<a href="detail/pangasius_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Other)</li></a>
+<a href="detail/pink_shrimp_alaska_and_canada.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (Alaska and Canada)</li></a>
+<a href="detail/pink_shrimp_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Pink Shrimp (MSC Certified)</li></a>
+<a href="detail/pink_shrimp_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pink Shrimp (Other)</li></a>
+<a href="detail/plaice.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Plaice</li></a>
+<a href="detail/pollock_pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollock/Pollack</li></a>
+<a href="detail/pouting_bib.html"><li class='yes'><img src="i/tick.png" alt="yes">Pouting/Bib</li></a>
+<a href="detail/ray.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Ray</li></a>
+<a href="detail/razor_clam.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Razor Clam</li></a>
+<a href="detail/salmon_organic_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Organic Farmed)</li></a>
+<a href="detail/salmon_coho___silver_salmon_us_canadian_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Coho / Silver Salmon US/Canadian Farmed)</li></a>
+<a href="detail/salmon_alaskan.html"><li class='yes'><img src="i/tick.png" alt="yes">Salmon (Alaskan)<br><span class="notinseason">not in season</span></li></a>
+<a href="detail/salmon_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Salmon (Other)</li></a>
+<a href="detail/sardine_mediterranean.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mediterranean)</li></a>
+<a href="detail/sardine_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Other)</li></a>
+<a href="detail/seabass_farmed_with_recirculation_system.html"><li class='yes'><img src="i/tick.png" alt="yes">Seabass (Farmed with Recirculation System)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/seabass_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seabass (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/shark.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Shark<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/skate.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Skate<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/snapper.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Snapper<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sole_msc_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (MSC Certified)</li></a>
+<a href="detail/sole_pacific.html"><li class='yes'><img src="i/tick.png" alt="yes">Sole (Pacific)</li></a>
+<a href="detail/sole_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sole (Other)</li></a>
+<a href="detail/spider_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Spider Crab</li></a>
+<a href="detail/spiny_lobster_nicaragua,_honduras,_brazil.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Spiny Lobster (Nicaragua, Honduras, Brazil)</li></a>
+<a href="detail/spiny_lobster_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Spiny Lobster (Other)</li></a>
+<a href="detail/squid_calamari_from_india,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Squid (Calamari from India, China, Thailand)</li></a>
+<a href="detail/squid_other.html"><li class='yes'><img src="i/tick.png" alt="yes">Squid (Other)</li></a>
+<a href="detail/stone_crab.html"><li class='yes'><img src="i/tick.png" alt="yes">Stone Crab</li></a>
+<a href="detail/striped_bass.html"><li class='yes'><img src="i/tick.png" alt="yes">Striped Bass<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/sturgeon___caviar_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Sturgeon / Caviar (Farmed)</li></a>
+<a href="detail/sturgeon___caviar_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sturgeon / Caviar (Wild Caught)</li></a>
+<a href="detail/swordfish_harpoon_caught.html"><li class='yes'><img src="i/tick.png" alt="yes">Swordfish (Harpoon Caught)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/swordfish_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Swordfish (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tiger_prawn_organic,_asc_or_globalgap_certified.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Organic, ASC or GlobalGAP Certified)</li></a>
+<a href="detail/tiger_prawn_other_farmed.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Other Farmed)</li></a>
+<a href="detail/tiger_prawn_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wild Caught)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/trout_rainbow_trout.html"><li class='yes'><img src="i/tick.png" alt="yes">Trout (Rainbow Trout)</li></a>
+<a href="detail/trout_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Trout (Other)</li></a>
+<a href="detail/tuna_troll_pole-and-line_pacific_skipjack,_yellowfin_and_albacore.html"><li class='yes'><img src="i/tick.png" alt="yes">Tuna (Troll/Pole-and-Line Pacific Skipjack, Yellowfin and Albacore)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/tuna_other.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tuna (Other)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/turbot_farmed.html"><li class='yes'><img src="i/tick.png" alt="yes">Turbot (Farmed)</li></a>
+<a href="detail/turbot_wild_caught.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Turbot (Wild Caught)</li></a>
+<a href="detail/walleye_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Walleye (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/yellow_perch_(us).html"><li class='yes'><img src="i/tick.png" alt="yes">Yellow Perch (US)<br><span class="mercury">high mercury</span></li></a>
+<a href="detail/zander___pike-perch.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander / Pike-Perch</li></a>
+</span>
+      </ol>
+
+      <h2>Sources:</h2>
+      <ol>
+        <li><a href="http://www.montereybayaquarium.org/cr/cr_seafoodwatch/sfw_recommendations.aspx?c=ln">Monterey Bay Aquarium</a></li>
+<li><a href="http://www.fishonline.org/">Marine Conservation Society</a></li>
+<li><a href="http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/">Greenpeace</a></li>
+<li><a href="http://en.wikipedia.org/">Wikipedia</a></li>
+<li><a href="http://www.fda.gov/food/foodborneillnesscontaminants/metals/ucm115644.htm">FDA Mercury Table</a></li>
+      </ol>
+      <span class="explanation"><p>Information was compiled from four main sources: the Monterey Bay Aquarium, the Marine Conservation Society, FishWatch, and the Greenpeace Red List. Individual entries have lists of sources, and I have aimed to reach a verdict solely based on the information contained in the sources. MCS ratings of 1-2 are considered "sustainable", and a rating of 3 is acceptable if other sources label the fish as sustainable.</p><p>Where there was serious contradiction, or the differences between sustainable and unsustainable sources of a fish was too involved, I have erred on the side of caution.</p><p>Mercury information is taken from the FDA Mercury table. Fish with a mean mercury PPM of less than 0.1 are considered low in mercury.</p><p>With some fish labeled unsustainable there will be exceptions where you can source them sustainably from specific places. To highlight these sources and mention updates, I've started a twitter stream at <a href="http://twitter.com/#!/which_fish">@which_fish</a>.</p></span>
+      <p>
+        Project and data collation by <a href="http://zarkonnen.com/">David Stark</a><br />
+        Design inspired by <a href='http://donotremove.co.uk'>Mike</a><br />
+        <a href="http://twitter.com/#!/which_fish">Follow us on Twitter</a><br />
+      </p>
+      <p>
+        Raw data in <a href="http://whichfish.org/fish.json">JSON</a> and <a href="fish.csv">as a spreadsheet</a>. Feel free to use.
+      </p>
+      <p>
+        Disclaimer: sustainability data is simplified for ease of use, and may contain inaccuracies.<br />
+        <a href="mailto:david.stark@zarkonnen.com">Contact me with suggestions/corrections.</a>
+      </p>
+    </div>
+  </body>
+</html>

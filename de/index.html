@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang='en-en' manifest='http://whichfish.org/app.appcache' xml:lang='en-en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='en' name='lang' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name="description" content="Ein Führer für den nachhaltigen Fischgenuss." />
+    <meta name="keywords" content="Fisch, Führer, nachhaltig, Umwelt" />
+    <title>Welcher Fisch?</title>
+    <link href='css/screen.css' media='all' rel='stylesheet' type='text/css' />
+
+    <!-- %link{:id => "favicon", :rel => "icon", :type => "image/png", :href => uri("/icon/16/16/#{ratio}.png")}/ -->
+    <!-- %link{:id => "touch", :rel => "apple-touch-icon", :href => uri("/icon/57/57/#{ratio}.png")}/ -->
+    <!-- %link{:id => "retina", :rel => "apple-touch-icon", :sizes => "114x114", :href => uri("/icon/114/114/#{ratio}.png")}/ -->
+    <link href='i/favicon.png' id='favicon' rel='icon' type='image/png' />
+    <link href='i/touch.png' id='touch' rel='apple-touch-icon' />
+    <link href='i/retina.png' id='retina' rel='apple-touch-icon' sizes='114x114' />
+    
+    <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Selects the data sheet for the current month.
+        var date = new Date();
+        var monthID = "month-" + date.getMonth();
+        $("#year").hide();
+        var monthList = $("#" + monthID).show();
+        var monthItems = monthList.find("li");
+        
+        // Quick search.
+        $("#searchBox").show().keyup(function() {
+          var searchTerm = $("#searchBox").val().toLowerCase();
+          monthItems.each(function() {
+            var item = $(this);
+            if (item.text().toLowerCase().indexOf(searchTerm) == -1) {
+              item.css("display", "none");
+            } else {
+              item.css("display", "block");
+            }
+          });
+        }).focus(function() {
+          if ($("#searchBox").val() == "Search") {
+            $("#searchBox").val("");
+          }
+        });
+      });
+    </script>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1304555-4']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </head>
+  <body>
+    <div id='page'>
+      <div id='versions'>de <a href="http://whichfish.org">en</a> <a href="http://fr.whichfish.org">fr</a></div>
+      <h1>
+        Welcher Fisch?
+      </h1>
+      <p>Ein Führer für den nachhaltigen Fischgenuss.</p>
+      <input type="text" value="Search" placeholder="Search" id="searchBox" style="display: none;" />
+      <ol>
+        <span id="year">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-0" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)<br><span class="notinseason">nicht in Saison</span></li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-1" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-2" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-3" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-4" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-5" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-6" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-7" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)</li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-8" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)<br><span class="notinseason">nicht in Saison</span></li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-9" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)<br><span class="notinseason">nicht in Saison</span></li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-10" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)<br><span class="notinseason">nicht in Saison</span></li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+<span id="month-11" style="display: none;">
+  <a href="detail/aal.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Aal</li></a>
+<a href="detail/amerikanischer_flussbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Amerikanischer Flussbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/austern.html"><li class='yes'><img src="i/tick.png" alt="yes">Austern</li></a>
+<a href="detail/barramundi_usa_europa_australien.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (USA/Europa/Australien)</li></a>
+<a href="detail/barramundi_geschlossene_produktion.html"><li class='yes'><img src="i/tick.png" alt="yes">Barramundi (Geschlossene Produktion)</li></a>
+<a href="detail/barramundi_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Barramundi (Andere)</li></a>
+<a href="detail/bodenseefelchen.html"><li class='yes'><img src="i/tick.png" alt="yes">Bodenseefelchen</li></a>
+<a href="detail/brachse_goldbrasse_-_biozucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Goldbrasse - Biozucht)</li></a>
+<a href="detail/brachse_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Brachse (Andere)</li></a>
+<a href="detail/dornhai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Dornhai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/flunder.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flunder</li></a>
+<a href="detail/flussbarsch_egli_kretzer.html"><li class='yes'><img src="i/tick.png" alt="yes">Flussbarsch/Egli/Kretzer</li></a>
+<a href="detail/flusskrebs_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Flusskrebs (USA)</li></a>
+<a href="detail/flusskrebs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Flusskrebs (Andere)</li></a>
+<a href="detail/forelle_regenbogenforelle.html"><li class='yes'><img src="i/tick.png" alt="yes">Forelle (Regenbogenforelle)</li></a>
+<a href="detail/forelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Forelle (Andere)</li></a>
+<a href="detail/franzosendorsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Franzosendorsch</li></a>
+<a href="detail/garnele_crevette_alaska_und_kanada.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (Alaska und Kanada)</li></a>
+<a href="detail/garnele_crevette_msc-zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Garnele/Crevette (MSC-Zertifiziert)</li></a>
+<a href="detail/garnele_crevette_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Garnele/Crevette (Andere)</li></a>
+<a href="detail/glasaugenbarsch_amerikanischer_zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Glasaugenbarsch/Amerikanischer Zander<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/goldmakrele_mahi-mahi.html"><li class='yes'><img src="i/tick.png" alt="yes">Goldmakrele/Mahi-Mahi</li></a>
+<a href="detail/grenadier_rattenschwanz.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Grenadier/Rattenschwanz</li></a>
+<a href="detail/hai.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hai<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hering_nordsee.html"><li class='yes'><img src="i/tick.png" alt="yes">Hering (Nordsee)</li></a>
+<a href="detail/hering_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hering (Andere)</li></a>
+<a href="detail/herzmuschel_mit_bagger_geerntet.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Herzmuschel (mit Bagger geerntet)</li></a>
+<a href="detail/herzmuschel_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Herzmuschel (Andere)</li></a>
+<a href="detail/hummer_mexiko_und_europa.html"><li class='yes'><img src="i/tick.png" alt="yes">Hummer (Mexiko und Europa)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/hummer_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Hummer (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kabeljau_dorsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kabeljau/Dorsch</li></a>
+<a href="detail/kaiserbarsch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kaiserbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/kliesche_(scharbe_eisflunder_rauhe_scholle).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Kliesche (Scharbe/Eisflunder/Rauhe Scholle)</li></a>
+<a href="detail/knurrhahn.html"><li class='yes'><img src="i/tick.png" alt="yes">Knurrhahn</li></a>
+<a href="detail/köhler_island.html"><li class='yes'><img src="i/tick.png" alt="yes">Köhler (Island)</li></a>
+<a href="detail/köhler_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Köhler (Andere)</li></a>
+<a href="detail/königskrabbe_usa.html"><li class='yes'><img src="i/tick.png" alt="yes">Königskrabbe (USA)</li></a>
+<a href="detail/königskrabbe_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Königskrabbe (Andere)</li></a>
+<a href="detail/lachs_gezüchtet_bio.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Gezüchtet Bio)</li></a>
+<a href="detail/lachs_coho___silverlachs_us_kanada.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Coho / Silverlachs US/Kanada)</li></a>
+<a href="detail/lachs_alaska.html"><li class='yes'><img src="i/tick.png" alt="yes">Lachs (Alaska)<br><span class="notinseason">nicht in Saison</span></li></a>
+<a href="detail/lachs_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Lachs (Andere)</li></a>
+<a href="detail/languste_nicaragua,_honduras,_brasilien.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Languste (Nicaragua, Honduras, Brasilien)</li></a>
+<a href="detail/languste_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Languste (Andere)</li></a>
+<a href="detail/makrele.html"><li class='yes'><img src="i/tick.png" alt="yes">Makrele</li></a>
+<a href="detail/marlin.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Marlin<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/moules.html"><li class='yes'><img src="i/tick.png" alt="yes">Moules</li></a>
+<a href="detail/palourde_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Palourde (Andere)</li></a>
+<a href="detail/pangasius_globalgap_asc_zertifiziert.html"><li class='yes'><img src="i/tick.png" alt="yes">Pangasius (GlobalGAP/ASC Zertifiziert)</li></a>
+<a href="detail/pangasius_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Pangasius (Andere)</li></a>
+<a href="detail/petersfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Petersfisch</li></a>
+<a href="detail/pollack.html"><li class='yes'><img src="i/tick.png" alt="yes">Pollack</li></a>
+<a href="detail/riesengarnelen_gezüchtet_(bio).html"><li class='yes'><img src="i/tick.png" alt="yes">Riesengarnelen (Gezüchtet (Bio))</li></a>
+<a href="detail/riesengarnelen_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Andere Zucht)</li></a>
+<a href="detail/riesengarnelen_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Riesengarnelen (Wildfang)</li></a>
+<a href="detail/rochen.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Rochen</li></a>
+<a href="detail/sardelle_atlantik.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardelle (Atlantik)</li></a>
+<a href="detail/sardelle_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardelle (Andere)</li></a>
+<a href="detail/sardine_mittelmeer.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Sardine (Mittelmeer)</li></a>
+<a href="detail/sardine_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Sardine (Andere)</li></a>
+<a href="detail/scheidenmuschel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scheidenmuschel</li></a>
+<a href="detail/schellfisch.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schellfisch</li></a>
+<a href="detail/schnapper_(snapper).html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schnapper (Snapper)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/scholle_goldbutt.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Scholle/Goldbutt</li></a>
+<a href="detail/schwertfisch_mit_harpune_gefangen.html"><li class='yes'><img src="i/tick.png" alt="yes">Schwertfisch (Mit Harpune Gefangen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/schwertfisch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Schwertfisch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seesaibling.html"><li class='yes'><img src="i/tick.png" alt="yes">Seesaibling</li></a>
+<a href="detail/seespinne.html"><li class='yes'><img src="i/tick.png" alt="yes">Seespinne</li></a>
+<a href="detail/seeteufel.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seeteufel<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/seezunge_msc-zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (MSC-Zertifikat)</li></a>
+<a href="detail/seezunge_pazifik.html"><li class='yes'><img src="i/tick.png" alt="yes">Seezunge (Pazifik)</li></a>
+<a href="detail/seezunge_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Seezunge (Andere)</li></a>
+<a href="detail/steinbutt_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinbutt (Gezüchtet)</li></a>
+<a href="detail/steinbutt_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Steinbutt (Wildfang)</li></a>
+<a href="detail/steinkrabbe.html"><li class='yes'><img src="i/tick.png" alt="yes">Steinkrabbe</li></a>
+<a href="detail/streifenbarsch.html"><li class='yes'><img src="i/tick.png" alt="yes">Streifenbarsch<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/stör___kaviar_gezüchtet.html"><li class='yes'><img src="i/tick.png" alt="yes">Stör / Kaviar (Gezüchtet)</li></a>
+<a href="detail/stör___kaviar_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Stör / Kaviar (Wildfang)</li></a>
+<a href="detail/taschenkrebs_knieper.html"><li class='yes'><img src="i/tick.png" alt="yes">Taschenkrebs/Knieper</li></a>
+<a href="detail/thunfisch_thon_pazifik_weißer,_gelbflossen_und_bonito_mit_schleppfischen.html"><li class='yes'><img src="i/tick.png" alt="yes">Thunfisch/Thon (Pazifik Weißer, Gelbflossen und Bonito mit Schleppfischen)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/thunfisch_thon_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Thunfisch/Thon (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/tiger_prawn_bio,_asc_oder_globalgap_zertifikat.html"><li class='yes'><img src="i/tick.png" alt="yes">Tiger Prawn (Bio, ASC oder GlobalGAP Zertifikat)</li></a>
+<a href="detail/tiger_prawn_andere_zucht.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Andere Zucht)</li></a>
+<a href="detail/tiger_prawn_wildfang.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tiger Prawn (Wildfang)</li></a>
+<a href="detail/tilapia.html"><li class='yes'><img src="i/tick.png" alt="yes">Tilapia</li></a>
+<a href="detail/tintenfisch_calamari_aus_indien,_china,_thailand.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Tintenfisch (Calamari aus Indien, China, Thailand)</li></a>
+<a href="detail/tintenfisch_andere.html"><li class='yes'><img src="i/tick.png" alt="yes">Tintenfisch (Andere)</li></a>
+<a href="detail/wels_catfish.html"><li class='yes'><img src="i/tick.png" alt="yes">Wels/Catfish</li></a>
+<a href="detail/wolfsbarsch_zucht_mit_rückführsystem.html"><li class='yes'><img src="i/tick.png" alt="yes">Wolfsbarsch (Zucht mit Rückführsystem)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/wolfsbarsch_andere.html"><li class='no'><img src="i/x.png" alt="no" style="padding-right: 2px">Wolfsbarsch (Andere)<br><span class="mercury">Quecksilber</span></li></a>
+<a href="detail/zander.html"><li class='yes'><img src="i/tick.png" alt="yes">Zander</li></a>
+</span>
+      </ol>
+
+      <h2>Sources:</h2>
+      <ol>
+        <li><a href="http://www.montereybayaquarium.org/cr/cr_seafoodwatch/sfw_recommendations.aspx?c=ln">Monterey Bay Aquarium</a></li>
+<li><a href="http://www.fishonline.org/">Marine Conservation Society</a></li>
+<li><a href="http://www.greenpeace.org/usa/en/campaigns/oceans/seafood/red-fish/">Greenpeace</a></li>
+<li><a href="http://en.wikipedia.org/">Wikipedia</a></li>
+<li><a href="http://www.fda.gov/food/foodborneillnesscontaminants/metals/ucm115644.htm">FDA Mercury Table</a></li>
+      </ol>
+      <span class="explanation"><p>Information was compiled from four main sources: the Monterey Bay Aquarium, the Marine Conservation Society, FishWatch, and the Greenpeace Red List. Individual entries have lists of sources, and I have aimed to reach a verdict solely based on the information contained in the sources. MCS ratings of 1-2 are considered "sustainable", and a rating of 3 is acceptable if other sources label the fish as sustainable.</p><p>Where there was serious contradiction, or the differences between sustainable and unsustainable sources of a fish was too involved, I have erred on the side of caution.</p><p>Mercury information is taken from the FDA Mercury table. Fish with a mean mercury PPM of less than 0.1 are considered low in mercury.</p><p>With some fish labeled unsustainable there will be exceptions where you can source them sustainably from specific places. To highlight these sources and mention updates, I've started a twitter stream at <a href="http://twitter.com/#!/which_fish">@which_fish</a>.</p></span>
+      <p>
+        Project and data collation by <a href="http://zarkonnen.com/">David Stark</a><br />
+        Design inspired by <a href='http://donotremove.co.uk'>Mike</a><br />
+        <a href="http://twitter.com/#!/which_fish">Follow us on Twitter</a><br />
+      </p>
+      <p>
+        Raw data in <a href="http://whichfish.org/fish.json">JSON</a> and <a href="fish.csv">as a spreadsheet</a>. Feel free to use.
+      </p>
+      <p>
+        Disclaimer: sustainability data is simplified for ease of use, and may contain inaccuracies.<br />
+        <a href="mailto:david.stark@zarkonnen.com">Contact me with suggestions/corrections.</a>
+      </p>
+    </div>
+  </body>
+</html>
